@@ -1,0 +1,29 @@
+<body>
+    <nav>
+        <label id="logo">catphish</label>
+        
+        <ul>
+            <li><a id="profile" class="active" (click)="this.reload()">Profile</a></li>
+            <li><a id="match" [routerLink]="['/match', this.username]">Match</a></li>
+            <li><a id="matches" [routerLink]="['/matches', this.username]">Matches</a></li>
+            <li><a id="signout" [routerLink]="['/']">Sign Out</a></li>
+            <li><a id="delete" [routerLink]="['/delete', this.username]">Delete</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="card">
+            <div id="pic-div" (mouseenter)="this.uploadPicPrompt()" (mouseleave)="this.removeUploadPicPrompt()">
+                <img src="" id="pic">
+                <input type="file" id="upload-pic" (change)="this.uploadPic($event)">
+                <label for="upload-pic" id="upload-btn">Choose picture</label>
+            </div>
+
+            <h2 id="username"></h2>
+
+            <textarea id="bio" maxlength="507" spellcheck="false" placeholder="Enter bio"></textarea>
+            
+            <button id="save-profile" (click)="this.saveProfile()">Save</button><span id="saved"></span>
+        </div>
+    </section>
+</body>

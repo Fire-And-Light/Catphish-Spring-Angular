@@ -1,0 +1,33 @@
+<body>
+    <nav id="nav">
+        <label id="logo">catphish</label>
+        
+        <ul>
+            <li><a id="profile" class="unmatched" (click)="this.enterProfile()">Profile</a></li>
+            <li><a id="match" class="active" (click)="this.reload()">Match</a></li>
+            <li><a id="matches" class="unmatched" (click)="this.enterMatches()">Matches</a></li>
+            <li><a id="signout" class="unmatched" (click)="this.enterMain()">Sign Out</a></li>
+            <li><a id="delete" class="unmatched" (click)="this.enterDelete()">Delete</a></li>
+        </ul>
+    </nav>
+
+    <section id="section">
+        <div id="cover" class="cover-off">
+            <div class="card">
+                <div id="pic-div">
+                    <img src="" id="pic">
+                </div>
+
+                <h2 id="candidate"></h2>
+
+                <textarea id="bio" readonly maxlength="507" spellcheck="false"></textarea>
+            </div>
+
+            <div class="options">
+                <fa-icon id="times" class="fa-times" [icon]="faTimes" (click)="this.reject()"></fa-icon>
+                <fa-icon id="check" class="fa-check" [icon]="faCheck" (click)="this.like()"></fa-icon>
+            </div>
+        </div>
+    </section>
+    <div id="message" class="message-off">MATCHED!</div>
+</body>

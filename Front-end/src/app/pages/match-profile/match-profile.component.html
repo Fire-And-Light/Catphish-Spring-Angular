@@ -1,0 +1,50 @@
+<body>
+    <nav id="nav">
+        <label id="logo">catphish</label>
+        
+        <ul>
+            <li><a id="profile" (click)="this.enterProfile()">Profile</a></li>
+            <li><a id="match" (click)="this.enterMatch()">Match</a></li>
+            <li><a id="matches" class="active" (click)="this.enterMatches()">Matches</a></li>
+            <li><a id="signout" (click)="this.enterMain()">Sign Out</a></li>
+            <li><a id="delete" (click)="this.enterDelete()">Delete</a></li>
+        </ul>
+    </nav>
+
+    <section id="section">
+        <div id="cover">
+            <div class="card">
+                <div id="pic-div">
+                    <img id="pic" src="" >
+                </div>
+    
+                <h2 id="profilehead"></h2>
+    
+                <textarea id="bio" readonly maxlength="507" spellcheck="false"></textarea>
+            </div>
+        </div>
+
+        <div class="space"></div>
+
+        <div id="chat">
+            <div class="header">
+                <h1 id="chathead"></h1>
+            </div>
+            <div id="chatbody" class="body"></div>
+            <div class="footer">
+                <form>
+                    <input id="message" type="text" placeholder="Enter message">
+                    <button id="send" type="button" (click)="this.sendMessage()">SEND</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="space"></div>
+
+        <div id="options">
+            <a id="unmatch" (click)="this.unmatchProfile()">UNMATCH</a>
+        </div>
+
+        <div class="space"></div>
+    </section>
+</body>

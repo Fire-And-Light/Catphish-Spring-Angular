@@ -1,0 +1,17 @@
+<body>
+    <nav id="nav">
+        <label id="logo">catphish</label>
+        
+        <ul>
+            <li><a id="profile" (click)="this.enterProfile()">Profile</a></li>
+            <li><a id="match" (click)="this.enterMatch()">Match</a></li>
+            <li><a id="matches" class="active" (click)="this.reload()">Matches</a></li>
+            <li><a id="signout" (click)="this.enterMain()">Sign Out</a></li>
+            <li><a id="delete" (click)="this.enterDelete()">Delete</a></li>
+        </ul>
+    </nav>
+
+    <section id="section">
+    </section>
+    <div id="empty"></div>
+</body>

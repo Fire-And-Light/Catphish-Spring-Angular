@@ -1,0 +1,22 @@
+<body>
+    <nav id="nav">
+        <label id="logo">catphish</label>
+        
+        <ul>
+            <li><a id="profile" (click)="this.enterProfile()">Profile</a></li>
+            <li><a id="match" (click)="this.enterMatch()">Match</a></li>
+            <li><a id="matches" (click)="this.enterMatches()">Matches</a></li>
+            <li><a id="signout" (click)="this.enterMain()">Sign Out</a></li>
+            <li><a id="delete" class="active" (click)="this.reload()">Delete</a></li>
+        </ul>
+    </nav>
+
+    <section id="section">
+    </section>
+
+    <div id="confirm">
+        <p>Are you sure you want to delete your account?</p>
+        <button id="yes" type="button" (click)="this.deleteAccount()">YES</button>
+        <button id="no" type="button" (click)="this.removeConfirmation()">NO</button>
+    </div>
+</body>
